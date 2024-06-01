@@ -1,0 +1,42 @@
+.home-main {
+  position: relative;
+  right: 8px;
+  bottom: 5px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  background-image: url("https://i.pinimg.com/originals/18/82/6b/18826b1eef9c7a13dac74848d7c0b99a.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%; /* Set the height to fill the viewport */
+
+  .welcome {
+    text-align: center;
+    .welcome-section-body {
+      h3 {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .section-reservation {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  app-decoration {
+    display: block;
+    margin: 0 auto;
+  }
+}

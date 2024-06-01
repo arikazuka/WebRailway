@@ -1,0 +1,74 @@
+.reservation-form {
+  background-color: #f4f4f4d0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .form-group {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      text-align: left;
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      select{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+  button {
+    position: relative;
+    top: 29px;
+    left: 12px;
+    height: 40px;
+    margin: 4px;
+    width: 100px;
+    padding: 1px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+    a{
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+    }
+  }
+}

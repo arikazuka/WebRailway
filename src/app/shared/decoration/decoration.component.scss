@@ -1,0 +1,71 @@
+/* Style for the main section */
+.setion-main {
+position: relative;
+top: 90px;
+left: 140px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Style for the left section */
+.section-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.section-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the right section */
+.section-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title h2 {
+  color: #333;
+}
+
+.about {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  text-align: center;
+  margin: 10px;
+  width: 100px; /* Set the width */
+  height: 100px; /* Set the height */
+  border-radius: 10px; /* Make it more square-like */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.container img {
+  width: 60px; /* Make the image fill the container */
+  height: 60px; /* Make the image fill the container */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.container h4 {
+    margin-top: 5px;
+    color: #555;
+    font-size: 14px; /* Adjust the font size */
+  }
