@@ -1,7 +1,7 @@
 .home-main {
   position: relative;
-  right: 8px;
-  bottom: 5px;
+  // right: 8px;
+  // bottom: 5px;
   font-family: Arial, sans-serif;
   color: #333;
   padding: 20px;
@@ -10,7 +10,8 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
-  width: 100%; /* Set the height to fill the viewport */
+  width: 100%;
+  margin-bottom: 400px; /* Set the height to fill the viewport */
 
   .welcome {
     text-align: center;

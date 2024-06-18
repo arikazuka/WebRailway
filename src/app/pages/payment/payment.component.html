@@ -1,0 +1,39 @@
+<div class="payment-container">
+  <div class="payment-content">
+    <h2 class="payment-title">Payment Details</h2>
+    
+    <!-- Display selected seats -->
+    <div *ngIf="invoiceItems.length > 0" class="invoice-items">
+      <div *ngFor="let item of invoiceItems" class="invoice-item">
+        <div>{{ item.description }}</div>
+        <div>{{ item.amount | currency:'USD':true }}</div>
+      </div>
+    </div>
+    
+    <!-- Total amount to be paid -->
+    <div class="total-amount">
+      <div>Total:</div>
+      <div>{{ totalPrice | currency:'USD':true }}</div>
+    </div>
+    
+    <!-- Payment details input fields -->
+    <div class="payment-details">
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" [(ngModel)]="cardNumber" placeholder="Enter card number" pattern="[0-9]{16}" required>
+      
+      <label for="expiryDate">Expiry Date:</label>
+      <input type="text" id="expiryDate" [(ngModel)]="expiryDate" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
+      
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" [(ngModel)]="cvv" placeholder="CVV" pattern="[0-9]{3,4}" required>
+    </div>
+    
+    <!-- Button to initiate payment -->
+    <button class="btn-pay" (click)="payWithCard()">Pay Now</button>
+    
+    <!-- Display payment status message after payment processing -->
+    <div *ngIf="paymentStatus" class="payment-status">
+      {{ paymentStatusMessage }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="train-list">
+  <h2>Available Trains</h2>
+  <div *ngIf="departures.length > 0; else noTrains">
+    <div class="train-card" *ngFor="let train of departures">
+      <div class="train-info">
+        <div class="train-header">
+          <span class="train-number">Train {{ train.number }}</span>
+          <span class="train-name">{{ train.name }}</span>
+        </div>
+        <img src="https://cdn3.grmedia.com.ge/app/uploads/sites/5/2019/02/samgzavro-mtavari.jpg" alt="Train Image" class="train-image">
+        <div class="train-details">
+          <div><strong>Departure:</strong> {{ train.departure }}</div>
+          <div><strong>Arrival:</strong> {{ train.arrive }}</div>
+          <div><strong>Date:</strong> {{ train.date }}</div>
+          <div><strong>Price:</strong> 50 GEL</div>
+        </div>
+        <button class="book-button" [routerLink]="['/buyerInfo']" >Book</button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noTrains>
+    <p>No trains available for the selected route and date.</p>
+  </ng-template>
+</div>

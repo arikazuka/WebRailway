@@ -1,0 +1,81 @@
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Adjust height as needed */
+  background-color: #f5f5f5;
+  background-image: url('https://previews.123rf.com/images/279photo/279photo1612/279photo161205273/68221977-payment-terminal-with-card-on-white-background-top-view.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.payment-content {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.9); /* Adjust opacity as needed */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.invoice-items,
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+}
+
+.btn-pay {
+  padding: 12px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.payment-status {
+  text-align: center;
+  font-size: 1rem;
+  color: #28a745; /* Green color for success message */
+  margin-top: 20px;
+}

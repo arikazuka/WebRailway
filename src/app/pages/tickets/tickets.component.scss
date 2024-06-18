@@ -1,0 +1,121 @@
+$tickets-bg-color: #f4f4f4d0;
+$tickets-border-color: #ccc;
+$tickets-primary-color: #007bff;
+$tickets-primary-hover-color: #0056b3;
+$tickets-text-color: #333;
+$tickets-font-size: 16px;
+$tickets-border-radius: 10px;
+$tickets-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$tickets-padding: 20px;
+
+@mixin form-group-styles {
+  width: 100%;
+  max-width: 300px;
+  margin: 15px 0;
+  text-align: left;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: $tickets-text-color;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border: 1px solid $tickets-border-color;
+    border-radius: 5px;
+    font-size: $tickets-font-size;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $tickets-primary-color;
+      outline: none;
+    }
+  }
+}
+
+.tickets-form {
+  background-color: $tickets-bg-color;
+  padding: $tickets-padding;
+  border-radius: $tickets-border-radius;
+  box-shadow: $tickets-box-shadow;
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form-group {
+      @include form-group-styles;
+    }
+  }
+
+  button {
+    width: 100%;
+    max-width: 150px;
+    padding: 12px;
+    background-color: $tickets-primary-color;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: $tickets-font-size;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $tickets-primary-hover-color;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      .form-group {
+        max-width: 100%;
+      }
+    }
+
+    button {
+      max-width: 100%;
+    }
+  }
+}
+
+.ticket-info, .ticket-not-found {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: $tickets-border-radius;
+  box-shadow: $tickets-box-shadow;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  div {
+    margin-bottom: 8px;
+  }
+
+  .ticket-not-found {
+    p {
+      color: red;
+    }
+  }
+}

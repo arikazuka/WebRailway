@@ -1,0 +1,49 @@
+<div class="background-container">
+  <div class="train">
+    <h2>Select Your Seat</h2>
+
+    <!-- First Class Vagon -->
+    <div class="vagon first-class">
+      <h3>First Class</h3>
+      <div class="seats">
+        <div *ngFor="let seat of firstClassSeats" 
+             class="seat" 
+             [ngClass]="{'selected': selectedSeats.includes(seat)}"
+             (click)="toggleSeat(seat)">
+          {{ seat }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Business Class Vagon -->
+    <div class="vagon business-class">
+      <h3>Business Class</h3>
+      <div class="seats">
+        <div *ngFor="let seat of businessClassSeats" 
+             class="seat" 
+             [ngClass]="{'selected': selectedSeats.includes(seat)}"
+             (click)="toggleSeat(seat)">
+          {{ seat }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Economy Class Vagon -->
+    <div class="vagon economy-class">
+      <h3>Economy Class</h3>
+      <div class="seats">
+        <div *ngFor="let seat of economyClassSeats" 
+             class="seat" 
+             [ngClass]="{'selected': selectedSeats.includes(seat)}"
+             (click)="toggleSeat(seat)">
+          {{ seat }}
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-info">
+      <p>Selected seat(s): <span>{{ selectedSeats.length > 0 ? selectedSeats.join(', ') : 'None' }}</span></p>
+      <button (click)="bookSeats()" [routerLink]="['/payment']">Pay for Seat</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+.booking-section {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f2f5; /* Light background color */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333; /* Dark text color */
+    }
+
+    .ticket-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .ticket-details {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-5px); /* Lift effect on hover */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        strong {
+          font-weight: 600; /* Bold text for labels */
+          color: #555; /* Medium dark text color */
+        }
+
+        div {
+          margin-top: 8px;
+          font-size: 1rem;
+          color: #666; /* Medium text color */
+        }
+      }
+    }
+
+    .contact-info,
+    .passenger-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .subsection-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #333; /* Dark text color */
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .form-control {
+          padding: 12px;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            outline: none;
+            border-color: #007bff; /* Focus border color */
+          }
+        }
+      }
+    }
+
+    .passenger-info {
+      .passenger-item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        .btn-select-seat {
+          align-self: flex-start;
+          padding: 10px 15px;
+          border: none;
+          background-color: #007bff; /* Blue */
+          color: #fff;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #0056b3; /* Darker blue */
+          }
+        }
+
+        .form-control {
+          padding: 12px;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            outline: none;
+            border-color: #007bff; /* Focus border color */
+          }
+        }
+      }
+    }
+  }
+}

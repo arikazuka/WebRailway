@@ -16,4 +16,14 @@ export class TrainService {
     const url =` ${this.apiUrl}/trains`;
     return this.http.get<any>(url);
   }
+
+  
+  // private apiUrl = 'https://railway.stepprojects.ge/api';
+  // constructor(private http:  HttpClient) { }
+
+  // getTickets(): Observable<any> {
+  //   const url = `${this.apiUrl}/tickets`;
+  //   return this.http.get<any>(url);
+  // }
+// }
 }

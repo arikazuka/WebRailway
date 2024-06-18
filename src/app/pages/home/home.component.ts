@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { DecorationComponent } from '../../shared/decoration/decoration.component';
-import { ReservationComponent } from '../../components/reservation/reservation.component';
 import { TrainService } from '../../services/train.service';
 import { TicketsService } from '../../services/tickets.service';
+import { HeaderComponent } from '../../components/header/header.component';
+import { ReservationComponent } from '../../components/reservation/reservation.component';
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [DecorationComponent, ReservationComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    imports: [DecorationComponent, HeaderComponent, HomeComponent, ReservationComponent, FooterComponent]
 })
 export class HomeComponent {
   trains: any[] = [];
